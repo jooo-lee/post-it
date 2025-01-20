@@ -14,6 +14,7 @@
           <p><%= `Text: ${messages[i].text}` %></p>
           <p><%= `Author: ${messages[i].user}` %></p>
           <p><%= `Date: ${messages[i].added}` %></p>
+          <a href="/messages/<%= messages[i].id %>">Open</a>
       </li>
     <% } %>
   </ul>
