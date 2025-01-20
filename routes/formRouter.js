@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const { createMessage, getForm } = require('../controllers/formController');
+const formController = require('../controllers/formController');
 
 const formRouter = Router();
 
-formRouter.get('/', getForm);
-formRouter.post('/', createMessage);
+formRouter.get('/', formController.getForm);
+formRouter.post('/', formController.createMessage);
 
 module.exports = formRouter;
