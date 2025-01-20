@@ -11,7 +11,9 @@ const PORT = 3000;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Parses form data into req.body on router.post()
 app.use(express.urlencoded({ extended: true }));
+
 app.use('/', indexRouter);
 app.use('/new', formRouter);
 app.use('/messages', messageRouter);
