@@ -18,6 +18,12 @@ app.use('/', indexRouter);
 app.use('/new', formRouter);
 app.use('/messages', messageRouter);
 
+// Catches thrown errors
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.statusCode || 500).send(err.message);
+});
+
 app.listen(PORT, () => {
   console.log(`Running at http://localhost:${PORT}`);
 });
