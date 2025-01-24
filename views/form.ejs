@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post-it!</title>
+  <link rel="stylesheet" href="/global.css">
+  <link rel="stylesheet" href="/form.css">
 </head>
 <body>
   <h1>Post-it!</h1>
   <form method="POST" action="/new">
-    <label for="messageUser">Your name:</label>
-    <input type="text" id="messageUser" name="messageUser">
-    <label for="messageText">Your message:</label>
-    <input type="text" id="messageText" name="messageText">
+    <label for="messageUser">
+      Name:
+      <input type="text" id="messageUser" name="messageUser" placeholder="Darth Vader" required>
+    </label>
+    <label for="messageText">
+      Message:
+      <textarea id="messageText" name="messageText" rows="10" placeholder="I am your father." required></textarea>
+    </label>
     <button type="submit">Post!</button>
   </form>
 </body>
