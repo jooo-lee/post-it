@@ -1,23 +1,34 @@
 const { v4: uuidv4 } = require('uuid');
 
+const getNewDate = () => {
+  const dateOptions = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+  };
+  return new Date().toLocaleString('en-US', dateOptions);
+};
+
 const messages = [
   {
     id: uuidv4(),
     text: 'Roger roger.',
     user: 'Battle droid',
-    added: new Date(),
+    added: getNewDate(),
   },
   {
     id: uuidv4(),
     text: 'Sir, yes sir!',
     user: 'Clone trooper',
-    added: new Date(),
+    added: getNewDate(),
   },
   {
     id: uuidv4(),
     text: 'Do or do not, there is no try.',
     user: 'Yoda',
-    added: new Date(),
+    added: getNewDate(),
   },
 ];
 
@@ -30,7 +41,7 @@ const getMessage = async (messageId) => {
 };
 
 const addMessage = async (text, user) => {
-  messages.push({ id: uuidv4(), text: text, user: user, added: new Date() });
+  messages.push({ id: uuidv4(), text: text, user: user, added: getNewDate() });
 };
 
 module.exports = { getAllMessages, getMessage, addMessage };

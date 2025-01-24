@@ -11,6 +11,10 @@ const PORT = 3000;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Enables use of static assets
+const assetsPath = path.join(__dirname, 'public');
+app.use(express.static(assetsPath));
+
 // Parses form data into req.body on router.post()
 app.use(express.urlencoded({ extended: true }));
 
