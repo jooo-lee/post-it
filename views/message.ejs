@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post-it!</title>
+  <link rel="stylesheet" href="/global.css">
+  <link rel="stylesheet" href="/message.css">
 </head>
 <body>
   <h1>Post-it!</h1>
-  <a href="/">Go back</a>
-  <div>
-    <p><%= `Text: ${message.text}` %></p>
-    <p><%= `Author: ${message.user}` %></p>
-    <p><%= `Date: ${message.added}` %></p>
+  <a href="/" class="go-back">Go back</a>
+  <div class="details-wrapper">
+    <p><span class="bold">Text: </span><%= message.text %></p>
+    <p><span class="bold">User: </span><%= message.user %></p>
+    <p><span class="bold">Date: </span><%= message.added %></p>
   </div>
 </body>
 </html>
