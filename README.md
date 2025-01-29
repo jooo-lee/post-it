@@ -18,3 +18,7 @@ This is a message board where users can post a message for others to see. It was
 - Set up and use routes, controllers and views (in EJS) in Express
 - Serve static assets in Express
 - Deploy an application using a PaaS
+
+## Acknowledgements:
+
+[Favicon](https://www.flaticon.com/free-icon/sticky-note_4434927?term=sticky+note&page=1&position=15&origin=tag&related_id=4434927) from [Flaticon](https://www.flaticon.com/).
