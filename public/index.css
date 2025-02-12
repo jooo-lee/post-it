@@ -28,7 +28,7 @@ li:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.user {
+.username {
   font-weight: bold;
   margin-bottom: 0.25rem;
 }

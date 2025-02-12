@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require('../db/queries');
 
 const getForm = (req, res) => {
   res.render('form');

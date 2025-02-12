@@ -13,11 +13,11 @@
   <form method="POST" action="/new">
     <label for="messageUser">
       Name:
-      <input type="text" id="messageUser" name="messageUser" placeholder="Darth Vader" required>
+      <input type="text" id="messageUser" name="messageUser" placeholder="Darth Vader" maxlength="10" required>
     </label>
     <label for="messageText">
       Message:
-      <textarea id="messageText" name="messageText" rows="10" placeholder="I am your father." required></textarea>
+      <textarea id="messageText" name="messageText" rows="10" placeholder="I am your father." maxlength="255" required></textarea>
     </label>
     <button type="submit">Post!</button>
   </form>
