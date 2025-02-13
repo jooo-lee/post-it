@@ -1,12 +1,13 @@
 function formatDate(date) {
-  const dateOptions = {
+  const dateFormat = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Toronto',
     year: 'numeric',
     month: 'short',
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
-  };
-  return date.toLocaleString('en-US', dateOptions);
+  });
+  return dateFormat.format(date);
 }
 
 module.exports = formatDate;
