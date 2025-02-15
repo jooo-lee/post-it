@@ -7,7 +7,7 @@ const createTable = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   text VARCHAR ( 255 ),
-  username VARCHAR ( 10 ),
+  username VARCHAR ( 20 ),
   added TIMESTAMPTZ
 );`;
 
